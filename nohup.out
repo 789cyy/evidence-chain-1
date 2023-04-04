@@ -1,0 +1,153 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/lib/log4j-slf4j-impl-2.11.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+06:13:09.136 [main] INFO org.springframework.core.KotlinDetector - Kotlin reflection implementation not found at runtime, related features won't be available.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.0.RELEASE)
+
+06:13:10.518 [main] INFO  c.y.e.chain.EvidenceApplication - Starting EvidenceApplication v1.0.1 on ubuntu with PID 3389 (/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar started by root in /home/chen/Documents/evidence-chain-demo-1.0.1)
+06:13:10.524 [main] INFO  c.y.e.chain.EvidenceApplication - No active profile set, falling back to default profiles: default
+06:13:11.098 [background-preinit] WARN  o.s.h.c.j.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+06:13:16.326 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9081 (http)
+06:13:16.411 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+06:13:16.459 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:13:16.460 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+06:13:16.514 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+06:13:16.777 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:13:16.778 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6001 ms
+06:13:16.820 [main] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+06:13:16.826 [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+06:13:16.827 [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06:13:16.827 [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+06:13:16.827 [main] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+06:13:17.195 [main] INFO  c.w.w.app.sdk.util.http.HttpUtil - Init http util with configurations: connectTimeout:[30], readTimeout:[30], writeTimeout:[30]
+06:13:18.332 [main] INFO  c.w.w.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo:{"signature":"0AF3149426C8CC5A7CA81C2DB43E3B14","appKey":"PcEgWj3v","timestamp":"1680613998253"}:]
+06:13:18.616 [main] INFO  c.w.w.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=0AF3149426C8CC5A7CA81C2DB43E3B14&appKey=PcEgWj3v&timestamp=1680613998253:]; Response:[{"code":0,"message":"success","data":{"encryptType":0,"sslCryptoType":0,"fiscoBcosVersion":"2.8.0","webaseVersion":"v1.5.4"},"attachment":null}] 
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Registered plugin: 'AbstractSqlParserHandler(sqlParserList=null, sqlParserFilter=null)'
+Parsed mapper file: 'class path resource [mapper/EviAttachMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/EviContractMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/EviDataMainMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/EviFieldMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/EviProductMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/EviStepMapper.xml]'
+Parsed mapper file: 'class path resource [mapper/EviUserMapper.xml]'
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.4.0 
+06:13:24.147 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+06:13:24.171 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+06:13:24.230 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9081 (http) with context path ''
+06:13:24.238 [main] INFO  c.y.e.chain.EvidenceApplication - Started EvidenceApplication in 14.985 seconds (JVM running for 16.09)
+06:13:24.289 [main] INFO  c.w.w.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister:{"signature":"469F3887E7668F8BA7B259EF0222EDE5","appKey":"PcEgWj3v","timestamp":"1680614004288"}:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]
+06:13:24.547 [main] INFO  c.w.w.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister?signature=469F3887E7668F8BA7B259EF0222EDE5&appKey=PcEgWj3v&timestamp=1680614004288:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]; Response:[{"code":0,"message":"success","data":null,"attachment":null}] 
+06:13:37.318 [http-nio-9081-exec-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:13:37.320 [http-nio-9081-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:13:37.373 [http-nio-9081-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 51 ms
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b1049eb] was not registered for synchronization because synchronization is not active
+06:13:38.217 [http-nio-9081-exec-7] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+06:13:38.218 [http-nio-9081-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:13:38.910 [http-nio-9081-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@683680725 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+==>  Preparing: SELECT COUNT( 1 ) FROM evi_data_main
+==> Parameters: 
+<==    Columns: COUNT( 1 )
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b1049eb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17fd38c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@640882431 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+==>  Preparing: SELECT COUNT( 1 ) FROM evi_data_main WHERE (chain_status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: COUNT( 1 )
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17fd38c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1480433a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@66743366 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+==>  Preparing: SELECT COUNT( 1 ) FROM evi_attach WHERE (chain_status = ?)
+==> Parameters: 1(Integer)
+<==    Columns: COUNT( 1 )
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1480433a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57453481] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1563467731 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+==>  Preparing: SELECT id,uname,pwd,sign_user_id,public_key,private_key,create_time,update_time FROM evi_user WHERE (uname = ?)
+==> Parameters: eviAdmin(String)
+<==    Columns: id, uname, pwd, sign_user_id, public_key, private_key, create_time, update_time
+<==        Row: 1, eviAdmin, e0bebd22819993425814866b62701e2919ea26f1370499c1037b53b9d49c2c8a, 484bf0eabffa4b7bbe793e0477ec2a77, 0x0270d783490edcb9f1dc7c3515e5b8f5b099a20a, MmZmZjI1ZDAyYzQ2MTJmNDE3MDA0MWY0NjdmYzliZTNkMGFjZGMxNjVhY2JjMjdiMjU1ZWE4MzhhYzVhMWM4ZQ==, 2021-06-25 02:34:54, 2021-06-30 01:21:49
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57453481]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@569f53b3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1482204944 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+==>  Preparing: SELECT id,contract_address,contract_name,sign_user_id,public_key,private_key,create_time,update_time FROM evi_contract
+==> Parameters: 
+<==    Columns: id, contract_address, contract_name, sign_user_id, public_key, private_key, create_time, update_time
+<==        Row: 1, 0x156f976340eb4e84a213e7f1d35bf1a6003a8f35, Evidence_20230327053634, 484bf0eabffa4b7bbe793e0477ec2a77, 0x0270d783490edcb9f1dc7c3515e5b8f5b099a20a, MmZmZjI1ZDAyYzQ2MTJmNDE3MDA0MWY0NjdmYzliZTNkMGFjZGMxNjVhY2JjMjdiMjU1ZWE4MzhhYzVhMWM4ZQ==, 2023-03-27 05:36:38, 2023-03-27 05:36:38
+<==        Row: 2, 0xe4cb247623700cec0b65ca6935ff9d95bf788b0a, Evidence_20230327053638, 484bf0eabffa4b7bbe793e0477ec2a77, 0x0270d783490edcb9f1dc7c3515e5b8f5b099a20a, MmZmZjI1ZDAyYzQ2MTJmNDE3MDA0MWY0NjdmYzliZTNkMGFjZGMxNjVhY2JjMjdiMjU1ZWE4MzhhYzVhMWM4ZQ==, 2023-03-27 05:36:39, 2023-03-27 05:36:39
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@569f53b3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11150e25] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1384420998 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+JsqlParserCountOptimize sql=SELECT  id,product_name,product_code,open_status,create_time,update_time  FROM evi_product 
+ 
+  
+ 
+  ORDER BY id DESC
+==>  Preparing: SELECT COUNT(1) FROM evi_product
+==> Parameters: 
+<==    Columns: COUNT(1)
+<==        Row: 2
+==>  Preparing: SELECT id,product_name,product_code,open_status,create_time,update_time FROM evi_product ORDER BY id DESC LIMIT ?
+==> Parameters: 10(Long)
+<==    Columns: id, product_name, product_code, open_status, create_time, update_time
+<==        Row: 2, test, I-002, 1, 2023-03-27 05:37:30, 2023-03-27 05:37:30
+<==        Row: 1, 亦笔产品, I-001, 1, 2021-06-29 10:47:28, 2021-06-29 10:47:28
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11150e25]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38defc3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1390059569 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+==>  Preparing: SELECT id,contract_address,contract_name,sign_user_id,public_key,private_key,create_time,update_time FROM evi_contract
+==> Parameters: 
+<==    Columns: id, contract_address, contract_name, sign_user_id, public_key, private_key, create_time, update_time
+<==        Row: 1, 0x156f976340eb4e84a213e7f1d35bf1a6003a8f35, Evidence_20230327053634, 484bf0eabffa4b7bbe793e0477ec2a77, 0x0270d783490edcb9f1dc7c3515e5b8f5b099a20a, MmZmZjI1ZDAyYzQ2MTJmNDE3MDA0MWY0NjdmYzliZTNkMGFjZGMxNjVhY2JjMjdiMjU1ZWE4MzhhYzVhMWM4ZQ==, 2023-03-27 05:36:38, 2023-03-27 05:36:38
+<==        Row: 2, 0xe4cb247623700cec0b65ca6935ff9d95bf788b0a, Evidence_20230327053638, 484bf0eabffa4b7bbe793e0477ec2a77, 0x0270d783490edcb9f1dc7c3515e5b8f5b099a20a, MmZmZjI1ZDAyYzQ2MTJmNDE3MDA0MWY0NjdmYzliZTNkMGFjZGMxNjVhY2JjMjdiMjU1ZWE4MzhhYzVhMWM4ZQ==, 2023-03-27 05:36:39, 2023-03-27 05:36:39
+Creating a new SqlSession
+<==      Total: 2
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c6950b4] was not registered for synchronization because synchronization is not active
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38defc3]
+JDBC Connection [HikariProxyConnection@408340449 wrapping com.mysql.cj.jdbc.ConnectionImpl@6d14ebbf] will not be managed by Spring
+JsqlParserCountOptimize sql=SELECT  id,product_name,product_code,open_status,create_time,update_time  FROM evi_product 
+ 
+  
+ 
+  ORDER BY id DESC
+==>  Preparing: SELECT COUNT(1) FROM evi_product
+==> Parameters: 
+<==    Columns: COUNT(1)
+<==        Row: 2
+==>  Preparing: SELECT id,product_name,product_code,open_status,create_time,update_time FROM evi_product ORDER BY id DESC LIMIT ?
+==> Parameters: 10(Long)
+<==    Columns: id, product_name, product_code, open_status, create_time, update_time
+<==        Row: 2, test, I-002, 1, 2023-03-27 05:37:30, 2023-03-27 05:37:30
+<==        Row: 1, 亦笔产品, I-001, 1, 2021-06-29 10:47:28, 2021-06-29 10:47:28
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c6950b4]

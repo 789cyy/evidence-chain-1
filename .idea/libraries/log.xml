@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="log">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/logs/log/evi_chain.log.2023-03-27.0.log.zip!/" />
+      <root url="jar://$PROJECT_DIR$/logs/log/evi_chain.log.2023-03-26.0.log.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

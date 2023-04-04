@@ -1,0 +1,374 @@
+2023-04-04 05:23:13.957 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Starting EvidenceApplication v1.0.1 on ubuntu with PID 2162 (/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar started by root in /home/chen/Documents/evidence-chain-demo-1.0.1)
+2023-04-04 05:23:13.972 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - No active profile set, falling back to default profiles: default
+2023-04-04 05:23:14.295 [background-preinit] WARN  o.s.h.converter.json.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-04-04 05:23:16.349 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9081 (http)
+2023-04-04 05:23:16.369 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+2023-04-04 05:23:16.381 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-04 05:23:16.381 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2023-04-04 05:23:16.400 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2023-04-04 05:23:16.508 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-04 05:23:16.508 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2441 ms
+2023-04-04 05:23:16.534 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2023-04-04 05:23:16.537 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-04-04 05:23:16.538 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-04-04 05:23:16.538 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2023-04-04 05:23:16.538 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2023-04-04 05:23:16.723 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Init http util with configurations: connectTimeout:[30], readTimeout:[30], writeTimeout:[30]
+2023-04-04 05:23:17.331 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo:{"signature":"DAA81C29635031169EEBEB53C8481D15","appKey":"PcEgWj3v","timestamp":"1680610997248"}:]
+2023-04-04 05:23:17.404 [main] ERROR com.webank.webase.app.sdk.util.http.HttpUtil - Http request failed: [http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=DAA81C29635031169EEBEB53C8481D15&appKey=PcEgWj3v&timestamp=1680610997248::{}]
+java.net.ConnectException: Failed to connect to /127.0.0.1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+	at com.webank.webase.app.sdk.util.http.HttpUtil.call(HttpUtil.java:150)
+	at com.webank.webase.app.sdk.util.http.HttpUtil.get(HttpUtil.java:178)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:61)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:41)
+	at com.webank.webase.app.sdk.client.AppService.checkAppConfig(AppService.java:83)
+	at com.webank.webase.app.sdk.client.AppClient.<init>(AppClient.java:73)
+	at com.yibi.evidence.chain.config.WebaseClient.<init>(WebaseClient.java:45)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:299)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1154)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.yibi.evidence.chain.EvidenceApplication.main(EvidenceApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:120)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+	... 56 common frames omitted
+2023-04-04 05:23:17.413 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=DAA81C29635031169EEBEB53C8481D15&appKey=PcEgWj3v&timestamp=1680610997248:]; Response:[] 
+2023-04-04 05:23:17.414 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webaseClient' defined in URL [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/classes!/com/yibi/evidence/chain/config/WebaseClient.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.yibi.evidence.chain.config.WebaseClient]: Constructor threw exception; nested exception is ApiException(code=105001, message=Http request error.)
+2023-04-04 05:23:17.418 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-04-04 05:23:17.451 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-04 05:23:17.453 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webaseClient' defined in URL [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/classes!/com/yibi/evidence/chain/config/WebaseClient.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.yibi.evidence.chain.config.WebaseClient]: Constructor threw exception; nested exception is ApiException(code=105001, message=Http request error.)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:303)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1154)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.yibi.evidence.chain.EvidenceApplication.main(EvidenceApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.yibi.evidence.chain.config.WebaseClient]: Constructor threw exception; nested exception is ApiException(code=105001, message=Http request error.)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:299)
+	... 27 common frames omitted
+Caused by: com.webank.webase.app.sdk.exception.ApiException: Http request error.
+	at com.webank.webase.app.sdk.util.http.HttpUtil.call(HttpUtil.java:159)
+	at com.webank.webase.app.sdk.util.http.HttpUtil.get(HttpUtil.java:178)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:61)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:41)
+	at com.webank.webase.app.sdk.client.AppService.checkAppConfig(AppService.java:83)
+	at com.webank.webase.app.sdk.client.AppClient.<init>(AppClient.java:73)
+	at com.yibi.evidence.chain.config.WebaseClient.<init>(WebaseClient.java:45)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 29 common frames omitted
+2023-04-04 05:38:13.687 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Starting EvidenceApplication v1.0.1 on ubuntu with PID 4530 (/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar started by root in /home/chen/Documents/evidence-chain-demo-1.0.1)
+2023-04-04 05:38:13.690 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - No active profile set, falling back to default profiles: default
+2023-04-04 05:38:14.167 [background-preinit] WARN  o.s.h.converter.json.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-04-04 05:38:16.009 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9081 (http)
+2023-04-04 05:38:16.023 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+2023-04-04 05:38:16.032 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-04 05:38:16.032 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2023-04-04 05:38:16.046 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2023-04-04 05:38:16.137 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-04 05:38:16.137 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2372 ms
+2023-04-04 05:38:16.165 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2023-04-04 05:38:16.168 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-04-04 05:38:16.169 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-04-04 05:38:16.169 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2023-04-04 05:38:16.169 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2023-04-04 05:38:16.333 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Init http util with configurations: connectTimeout:[30], readTimeout:[30], writeTimeout:[30]
+2023-04-04 05:38:16.618 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo:{"signature":"FFC7266EAEAAB648E1E31BECBFFE7A64","appKey":"PcEgWj3v","timestamp":"1680611896597"}:]
+2023-04-04 05:38:17.388 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=FFC7266EAEAAB648E1E31BECBFFE7A64&appKey=PcEgWj3v&timestamp=1680611896597:]; Response:[{"code":0,"message":"success","data":{"encryptType":0,"sslCryptoType":0,"fiscoBcosVersion":"2.8.0","webaseVersion":"v1.5.4"},"attachment":null}] 
+2023-04-04 05:38:20.198 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+2023-04-04 05:38:20.205 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2023-04-04 05:38:20.304 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9081 (http) with context path ''
+2023-04-04 05:38:20.340 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Started EvidenceApplication in 7.147 seconds (JVM running for 7.749)
+2023-04-04 05:38:20.411 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister:{"signature":"67F1B0CE3B9829804901FA0B8B1E8820","appKey":"PcEgWj3v","timestamp":"1680611900410"}:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]
+2023-04-04 05:38:20.962 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister?signature=67F1B0CE3B9829804901FA0B8B1E8820&appKey=PcEgWj3v&timestamp=1680611900410:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]; Response:[{"code":0,"message":"success","data":null,"attachment":null}] 
+2023-04-04 05:38:25.614 [http-nio-9081-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04 05:38:25.614 [http-nio-9081-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-04 05:38:25.645 [http-nio-9081-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 31 ms
+2023-04-04 05:38:26.497 [http-nio-9081-exec-9] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2023-04-04 05:38:26.497 [http-nio-9081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-04 05:38:26.889 [http-nio-9081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-04 05:38:38.486 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-04 05:38:38.648 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-04 05:41:18.111 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Starting EvidenceApplication v1.0.1 on ubuntu with PID 2719 (/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar started by root in /home/chen/Documents/evidence-chain-demo-1.0.1)
+2023-04-04 05:41:18.113 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - No active profile set, falling back to default profiles: default
+2023-04-04 05:41:18.410 [background-preinit] WARN  o.s.h.converter.json.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-04-04 05:41:20.258 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9081 (http)
+2023-04-04 05:41:20.274 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+2023-04-04 05:41:20.282 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-04 05:41:20.282 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2023-04-04 05:41:20.293 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2023-04-04 05:41:20.386 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-04 05:41:20.386 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2178 ms
+2023-04-04 05:41:20.418 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2023-04-04 05:41:20.423 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-04-04 05:41:20.423 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-04-04 05:41:20.424 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2023-04-04 05:41:20.424 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2023-04-04 05:41:20.643 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Init http util with configurations: connectTimeout:[30], readTimeout:[30], writeTimeout:[30]
+2023-04-04 05:41:20.992 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo:{"signature":"DD043434FE65039A5BBEF9E06424A317","appKey":"PcEgWj3v","timestamp":"1680612080955"}:]
+2023-04-04 05:41:21.641 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=DD043434FE65039A5BBEF9E06424A317&appKey=PcEgWj3v&timestamp=1680612080955:]; Response:[{"code":0,"message":"success","data":{"encryptType":0,"sslCryptoType":0,"fiscoBcosVersion":"2.8.0","webaseVersion":"v1.5.4"},"attachment":null}] 
+2023-04-04 05:41:23.468 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+2023-04-04 05:41:23.472 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2023-04-04 05:41:23.492 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9081 (http) with context path ''
+2023-04-04 05:41:23.496 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Started EvidenceApplication in 5.925 seconds (JVM running for 6.544)
+2023-04-04 05:41:23.517 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister:{"signature":"1C776274365F72E6D6EF94DEFBADB3AF","appKey":"PcEgWj3v","timestamp":"1680612083516"}:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]
+2023-04-04 05:41:23.712 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister?signature=1C776274365F72E6D6EF94DEFBADB3AF&appKey=PcEgWj3v&timestamp=1680612083516:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]; Response:[{"code":0,"message":"success","data":null,"attachment":null}] 
+2023-04-04 05:42:02.264 [http-nio-9081-exec-8] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04 05:42:02.273 [http-nio-9081-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-04 05:42:02.350 [http-nio-9081-exec-8] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 76 ms
+2023-04-04 05:42:03.205 [http-nio-9081-exec-8] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2023-04-04 05:42:03.206 [http-nio-9081-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-04 05:42:03.557 [http-nio-9081-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-04 06:11:24.369 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Starting EvidenceApplication v1.0.1 on ubuntu with PID 2229 (/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar started by root in /home/chen/Documents/evidence-chain-demo-1.0.1)
+2023-04-04 06:11:24.371 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - No active profile set, falling back to default profiles: default
+2023-04-04 06:11:25.016 [background-preinit] WARN  o.s.h.converter.json.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-04-04 06:11:28.682 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9081 (http)
+2023-04-04 06:11:28.708 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+2023-04-04 06:11:28.721 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-04 06:11:28.721 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2023-04-04 06:11:28.740 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2023-04-04 06:11:28.858 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-04 06:11:28.858 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4363 ms
+2023-04-04 06:11:28.908 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2023-04-04 06:11:28.913 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-04-04 06:11:28.913 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-04-04 06:11:28.913 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2023-04-04 06:11:28.914 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2023-04-04 06:11:29.151 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Init http util with configurations: connectTimeout:[30], readTimeout:[30], writeTimeout:[30]
+2023-04-04 06:11:29.671 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo:{"signature":"B525CC1585A0AED9014AF71037513C4B","appKey":"PcEgWj3v","timestamp":"1680613889630"}:]
+2023-04-04 06:11:29.736 [main] ERROR com.webank.webase.app.sdk.util.http.HttpUtil - Http request failed: [http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=B525CC1585A0AED9014AF71037513C4B&appKey=PcEgWj3v&timestamp=1680613889630::{}]
+java.net.ConnectException: Failed to connect to /127.0.0.1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+	at com.webank.webase.app.sdk.util.http.HttpUtil.call(HttpUtil.java:150)
+	at com.webank.webase.app.sdk.util.http.HttpUtil.get(HttpUtil.java:178)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:61)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:41)
+	at com.webank.webase.app.sdk.client.AppService.checkAppConfig(AppService.java:83)
+	at com.webank.webase.app.sdk.client.AppClient.<init>(AppClient.java:73)
+	at com.yibi.evidence.chain.config.WebaseClient.<init>(WebaseClient.java:45)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:299)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1154)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.yibi.evidence.chain.EvidenceApplication.main(EvidenceApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:120)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+	... 56 common frames omitted
+2023-04-04 06:11:29.744 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=B525CC1585A0AED9014AF71037513C4B&appKey=PcEgWj3v&timestamp=1680613889630:]; Response:[] 
+2023-04-04 06:11:29.746 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webaseClient' defined in URL [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/classes!/com/yibi/evidence/chain/config/WebaseClient.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.yibi.evidence.chain.config.WebaseClient]: Constructor threw exception; nested exception is ApiException(code=105001, message=Http request error.)
+2023-04-04 06:11:29.749 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-04-04 06:11:29.779 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-04 06:11:29.781 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webaseClient' defined in URL [jar:file:/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar!/BOOT-INF/classes!/com/yibi/evidence/chain/config/WebaseClient.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.yibi.evidence.chain.config.WebaseClient]: Constructor threw exception; nested exception is ApiException(code=105001, message=Http request error.)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:303)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1154)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.yibi.evidence.chain.EvidenceApplication.main(EvidenceApplication.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.yibi.evidence.chain.config.WebaseClient]: Constructor threw exception; nested exception is ApiException(code=105001, message=Http request error.)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:299)
+	... 27 common frames omitted
+Caused by: com.webank.webase.app.sdk.exception.ApiException: Http request error.
+	at com.webank.webase.app.sdk.util.http.HttpUtil.call(HttpUtil.java:159)
+	at com.webank.webase.app.sdk.util.http.HttpUtil.get(HttpUtil.java:178)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:61)
+	at com.webank.webase.app.sdk.util.http.Http.get(Http.java:41)
+	at com.webank.webase.app.sdk.client.AppService.checkAppConfig(AppService.java:83)
+	at com.webank.webase.app.sdk.client.AppClient.<init>(AppClient.java:73)
+	at com.yibi.evidence.chain.config.WebaseClient.<init>(WebaseClient.java:45)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 29 common frames omitted
+2023-04-04 06:13:10.518 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Starting EvidenceApplication v1.0.1 on ubuntu with PID 3389 (/home/chen/Documents/evidence-chain-demo-1.0.1/evidence-chain-demo-1.0.1.jar started by root in /home/chen/Documents/evidence-chain-demo-1.0.1)
+2023-04-04 06:13:10.524 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - No active profile set, falling back to default profiles: default
+2023-04-04 06:13:11.098 [background-preinit] WARN  o.s.h.converter.json.Jackson2ObjectMapperBuilder - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-04-04 06:13:16.326 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9081 (http)
+2023-04-04 06:13:16.411 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9081"]
+2023-04-04 06:13:16.459 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-04 06:13:16.460 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2023-04-04 06:13:16.514 [main] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2023-04-04 06:13:16.777 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-04 06:13:16.778 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6001 ms
+2023-04-04 06:13:16.820 [main] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2023-04-04 06:13:16.826 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-04-04 06:13:16.827 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-04-04 06:13:16.827 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2023-04-04 06:13:16.827 [main] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2023-04-04 06:13:17.195 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Init http util with configurations: connectTimeout:[30], readTimeout:[30], writeTimeout:[30]
+2023-04-04 06:13:18.332 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo:{"signature":"0AF3149426C8CC5A7CA81C2DB43E3B14","appKey":"PcEgWj3v","timestamp":"1680613998253"}:]
+2023-04-04 06:13:18.616 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/basicInfo?signature=0AF3149426C8CC5A7CA81C2DB43E3B14&appKey=PcEgWj3v&timestamp=1680613998253:]; Response:[{"code":0,"message":"success","data":{"encryptType":0,"sslCryptoType":0,"fiscoBcosVersion":"2.8.0","webaseVersion":"v1.5.4"},"attachment":null}] 
+2023-04-04 06:13:24.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9081"]
+2023-04-04 06:13:24.171 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2023-04-04 06:13:24.230 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9081 (http) with context path ''
+2023-04-04 06:13:24.238 [main] INFO  com.yibi.evidence.chain.EvidenceApplication - Started EvidenceApplication in 14.985 seconds (JVM running for 16.09)
+2023-04-04 06:13:24.289 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Start Http request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister:{"signature":"469F3887E7668F8BA7B259EF0222EDE5","appKey":"PcEgWj3v","timestamp":"1680614004288"}:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]
+2023-04-04 06:13:24.547 [main] INFO  com.webank.webase.app.sdk.util.http.HttpUtil - Request:[http://127.0.0.1:5001/WeBASE-Node-Manager/api/appRegister?signature=469F3887E7668F8BA7B259EF0222EDE5&appKey=PcEgWj3v&timestamp=1680614004288:{"appIp":"127.0.0.2","appPort":9081,"appLink":"http://127.0.0.2:9081/evidence/index.html"}]; Response:[{"code":0,"message":"success","data":null,"attachment":null}] 
+2023-04-04 06:13:37.318 [http-nio-9081-exec-6] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-04 06:13:37.320 [http-nio-9081-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-04 06:13:37.373 [http-nio-9081-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 51 ms
+2023-04-04 06:13:38.217 [http-nio-9081-exec-7] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2023-04-04 06:13:38.218 [http-nio-9081-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-04 06:13:38.910 [http-nio-9081-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
